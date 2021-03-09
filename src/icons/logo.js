@@ -1,0 +1,1 @@
+export const logo = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.24 76.2"><g id="Layer_3" data-name="Layer 3"><polygon points="76.4 0 90.82 24.97 105.24 0 76.4 0"/><polygon points="90.82 51.22 76.4 76.2 105.24 76.2 90.82 51.22"/><path d="M0,38.1A38.1,38.1,0,0,0,38.1,76.2H51.61L73.92,37.54,52.25,0H0Z"/></g></svg>

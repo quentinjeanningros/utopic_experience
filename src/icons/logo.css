@@ -1,0 +1,24 @@
+.logo-icon
+{
+    width: 10vh;
+}
+
+.logo-text
+{
+    font-family: 'Darker Grotesque', sans-serif;
+    height: 3vh;
+    text-align: left;
+    font-size: 5vh;
+    margin-left: 3vh;
+    line-height: 0.9em;
+    margin-top: -0.2em;
+    letter-spacing: 0.05em;
+    height: 100%;
+}
+
+.logo-container
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+}

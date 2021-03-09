@@ -1,0 +1,23 @@
+*
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+input, button, submit
+{
+    border:none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap');
+
+.page
+{
+    padding-top: 4vh;
+    padding-left: 2.5vh;
+    height: 96vh;
+}
