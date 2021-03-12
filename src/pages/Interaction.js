@@ -30,7 +30,7 @@ class Interaction extends React.Component
                     {this.interaction.plugin.map((item, index) =>
                         <InteractionButton  text={snakeToText(item)}
                                             color={this.interaction.color}
-                                            action={() => window.location.href = "/plugin:" + item}
+                                            action={() => window.location.href = "/device:" + this.device.device + "/interaction:" + this.interaction.type + "/plugin:" + item}
                                             key={item}/>
                     )}
                 </div>

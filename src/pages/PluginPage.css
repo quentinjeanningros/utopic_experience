@@ -1,47 +1,125 @@
 .plugin-container
 {
-    padding-top: 20vh;
+    padding-top: 22vh;
     padding-left: 21vw;
     padding-right: 21vw;
+    padding-bottom: 22vh;
 }
 
 .plugin-title
 {
     font-size: 3.5vw;
-    margin-bottom: 7vh;
+    margin-bottom: 2vw;
 }
 
 .plugin-text
 {
-    font-size: 1.25vw;
+    font-size: 1vw;
     line-height: 1.3em;
+    padding-right: 20%;
+}
+
+.plugin-spec-container
+{
+    margin-top: 5vw;
 }
 
 .plugin-spec
 {
     display: flex;
-    align-items: center;
-    margin-top: 4vh;
+    align-items: flex-start;
+    margin-top: 4vw;
+}
+
+.plugin-spec-adjust
+{
+    margin-bottom: 5.5vw;
 }
 
 .plugin-spec-title
 {
-    font-size: 2.5vw;
-    flex: 2;
+    line-height: 0.8em;
+    font-size: 2vw;
+    flex: 1.5;
     text-align: right;
 }
 
 .plugin-spec-content
 {
-    padding-left: 2vh;
+    padding-left: 3vw;
     flex: 5;
-    text-align: left;
+}
+
+.plugin-spec-content__container
+{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    height: 2vw;
 }
 
 .plugin-spec-device
 {
-    height: 2.5vw;
-;}
+    margin-right: 1vw;
+}
+
+.plugin-spec-content-download
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.download-button-container
+{
+    display: flex;
+    align-items: center;
+    margin-right: 6vw;
+    margin-bottom: 1vw;
+    padding-right: 5vw;
+}
+
+.download-button-icon
+{
+    width: 2.5vw;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.download-button-text
+{
+    position: absolute;
+    font-size: 1.1vw;
+    margin-top: -0.5vw;
+    left: 4vw;
+    width: 7vw;
+    text-align: left;
+
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.download-button-text__hover
+{
+    text-decoration: underline;
+    position: absolute;
+    font-size: 1.1vw;
+    margin-top: -0.5vw;
+    left: 3.7vw;
+    text-align: left;
+    width: 7vw;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+.plugin-exemple
+{
+    margin-right: 5vw;
+    border-radius: 0.5vw;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 1vw;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.8vw;
+}
+
+.tab { margin-left: 2rem; }

@@ -46,7 +46,8 @@ class App extends React.Component {
                     <Route exact path="/home" render={() => <Home updatePath={this.setPath}/>}/>
                     <Route exact path="/device:devicename" render={() => <Device updatePath={this.setPath}/>}/>
                     <Route exact path={"/device:devicename/interaction:interaction"} render={() => <Interaction updatePath={this.setPath}/>}/>
-                    <Route exact path={"/plugin:plugin"} component={PluginPage}/>
+                    <Route exact path={"/plugin:plugin"} render={() => <PluginPage updatePath={this.setPath}/>}/>
+                    <Route exact path={"/device:devicename/interaction:interaction/plugin:plugin"} render={() => <PluginPage updatePath={this.setPath}/>}/>
                     <Route exact path="/">
                         <Redirect to="/home"/>
                     </Route>
