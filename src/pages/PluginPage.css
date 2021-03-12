@@ -1,0 +1,47 @@
+.plugin-container
+{
+    padding-top: 20vh;
+    padding-left: 21vw;
+    padding-right: 21vw;
+}
+
+.plugin-title
+{
+    font-size: 3.5vw;
+    margin-bottom: 7vh;
+}
+
+.plugin-text
+{
+    font-size: 1.25vw;
+    line-height: 1.3em;
+}
+
+.plugin-spec
+{
+    display: flex;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+.plugin-spec-title
+{
+    font-size: 2.5vw;
+    flex: 2;
+    text-align: right;
+}
+
+.plugin-spec-content
+{
+    padding-left: 2vh;
+    flex: 5;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.plugin-spec-device
+{
+    height: 2.5vw;
+;}

@@ -13,11 +13,33 @@ input, button, submit
     cursor: pointer;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700;800;900&display=swap');
 
-.page
+.font-main
 {
-    padding-top: 4vh;
-    padding-left: 2.5vh;
-    height: 96vh;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 800;
+    line-height: 0.9em;
+}
+
+.font-second
+{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 700;
+    line-height: 0.9em;
+}
+
+.font-third
+{
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 900;
+    line-height: 0.9em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.font-paragraph
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }

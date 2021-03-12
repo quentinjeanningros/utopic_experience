@@ -1,6 +1,9 @@
 .logo-icon
 {
     width: 10vh;
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease-in;
 }
 
 .logo-text
@@ -14,11 +17,63 @@
     margin-top: -0.2em;
     letter-spacing: 0.05em;
     height: 100%;
+    font-weight: 800;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
 }
+
+.logo-text__hover
+{
+    font-family: 'Darker Grotesque', sans-serif;
+    height: 3vh;
+    text-align: left;
+    font-size: 5vh;
+    margin-left: 2vh;
+    line-height: 0.9em;
+    margin-top: -0.2em;
+    letter-spacing: 0.05em;
+    height: 100%;
+    font-weight: 800;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.logo-text-button
+{
+    font-family: 'Darker Grotesque', sans-serif;
+    height: 3vh;
+    text-align: left;
+    font-size: 5vh;
+    line-height: 0.9em;
+    letter-spacing: 0.05em;
+    font-weight: 800;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+
+.logo-text-button:hover, .logo-text-button:focus
+{
+    font-family: 'Darker Grotesque', sans-serif;
+    color: black !important ;
+    text-decoration: underline;
+    height: 3vh;
+    text-align: left;
+    font-size: 5vh;
+    line-height: 0.9em;
+    letter-spacing: 0.05em;
+    font-weight: 800;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
 
 .logo-container
 {
+    top: 4vh;
+    left: 2.5vh;
+    position: absolute;
     display: flex;
     align-items: center;
-    position: relative;
+    z-index: 999;
 }

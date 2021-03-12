@@ -1,0 +1,29 @@
+.home-list-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25vh;
+    flex-wrap: wrap;
+}
+
+.home-button
+{
+    margin: 4vw;
+}
+
+.home-button-box
+{
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.home-button-text
+{
+    margin-top: 1.5vh;
+    text-align: right;
+    font-size: 2.5vh;
+    letter-spacing: 0.01em;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
