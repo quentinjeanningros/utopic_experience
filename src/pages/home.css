@@ -5,6 +5,7 @@
     justify-content: center;
     padding-top: 25vh;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
 .home-button
@@ -25,5 +26,66 @@
     font-size: 2.5vh;
     letter-spacing: 0.01em;
     transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.toggle-button
+{
+    position: absolute;
+    right: 5vw;
+    width: 5vh;
+    top: 6vh;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    z-index: 999;
+}
+
+.fast-list
+{
+    padding-top: 22vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-bottom: 22vh;
+}
+
+.fast-list-device
+{
+    font-size: 7vh;
+    margin-bottom: 2vh;
+}
+
+.fast-list-type-container
+{
+    margin-left: 7vh;
+    margin-bottom: 7vh;
+}
+
+.fast-list-type
+{
+    font-size: 4.5vh;
+}
+
+.fast-list-plug-container
+{
+    margin-left: 6vh;
+    margin-bottom: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fast-list-plug__on
+{
+    font-size: 5vh;
+    margin-bottom: 1vh;
+    transition-duration: 0.05s;
+    transition-timing-function: ease-in;
+}
+
+.fast-list-plug__off
+{
+    font-size: 5vh;
+    margin-bottom: 1vh;
+    transition-duration: 0.5s;
     transition-timing-function: ease-in;
 }

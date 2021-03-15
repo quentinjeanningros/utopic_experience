@@ -1,6 +1,6 @@
 import './PluginPage.css';
 import React, {useState} from 'react';
-import {pluginList, cache, findDeviceID, findInteractionID, devidePath, snakeToText, getRandomColor, colors} from '../Assets.js'
+import {pluginList, cache, findDeviceID, findInteractionID, devidePath, snakeToText, getRandomColor} from '../Assets.js'
 
 function findPlugin(name)
 {
@@ -70,33 +70,7 @@ class PluginPage  extends React.Component
                         <div className="plugin-spec-title font-second">Exemple :</div>
                         <div className="plugin-spec-content">
                             <div className="plugin-exemple ">
-                                <code>
-                                    <span style={{color: colors[2]}}>class</span> <span style={{color: colors[4]}}>ViewController</span>: <span style={{color: colors[5]}}>UIViewController</span>, <span style={{color: colors[3]}}>HandednessDelegate</span><br/>
-                                    &#123;<br/>
-                                    <br/>
-                                    <span className="tab"/><span style={{color: colors[2]}}>func</span> <span style={{color: colors[4]}}>onAction</span>(hand: <span style={{color: colors[3]}}>Handedness</span>) &#123;<br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>if</span> (hand == <span style={{color: colors[3]}}>Handedness</span>.<span style={{color: colors[3]}}>left</span>) &#123;<br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"👈"</span><br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>else if</span> (hand == <span style={{color: colors[3]}}>Handedness</span>.<span style={{color: colors[3]}}>right</span>) &#123;<br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"👉"</span><br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>else</span> &#123;<br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"🤔"</span><br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
-                                    <span className="tab"/><span className="tab"/>&#125;<br/>
-                                    <br/>
-                                    <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>@IBOutlet weak var</span> <span style={{color: colors[4]}}>label</span>: <span style={{color: colors[5]}}>UILabel!</span><br/>
-                                    <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>@IBOutlet var</span> <span style={{color: colors[4]}}>handednessDetectionView</span>: <span style={{color: colors[3]}}>SimpleHandednessDetectionView!</span><br/>
-                                    <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>var</span> <span style={{color: colors[4]}}>learning</span>: <span style={{color: colors[3]}}>HandednessLearning</span> = <span style={{color: colors[3]}}>HandednessLearning</span>(size: <span style={{color: colors[0]}}>5</span>)<br/>
-                                    <br/>
-                                    <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>override func</span> <span style={{color: colors[4]}}>viewDidLoad</span>() &#123;<br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>super</span>.<span style={{color: colors[5]}}>viewDidLoad</span>()<br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>handednessDetectionView</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[3]}}>learning</span><br/>
-                                    <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>learning</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[2]}}>self</span><br/>
-                                    <span className="tab"/><span className="tab"/>&#125;<br/>
-                                        &#125;<br/>
-                                </code>
+                                {this.plugin.code}
                             </div>
                         </div>
                     </div>

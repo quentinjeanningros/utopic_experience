@@ -1,4 +1,4 @@
-import {Animation, AR, Camera, Gesture, Sort, Special, Cursor, VR, Webcam, Swift, Kotlin, React} from "./icons/InterractionIcons.js"
+import {Animation, AR, Camera, Gesture, Sort, Special, Cursor, VR, Webcam, Swift, Kotlin, React, JS} from "./icons/InterractionIcons.js"
 
 export const colors = ["#ffa502", "#ff6348", "#ff4757", "#2ed573", "#1e90ff", "#3742fa"]
 
@@ -61,8 +61,9 @@ export const cache = [
 /////////PHONE/////////
     {device: "phone",   interactions: [
         {type: "gesture_recognition",   icon: Gesture,  color: "#ff47b3",   plugin: [
+            "tap-to-step",
             "handedness_recognition_one_shot",
-            "handedness_recognition_down_scrolling",
+            "handedness_recognition_scrolling",
             "touch_heat_map",
             "phone_tilt_to_ground",
             "phone_tilt_to_start",
@@ -113,8 +114,9 @@ export const cache = [
 /////////TABLET/////////
     {device: "tablet",  interactions: [
         {type: "gesture_recognition",   icon: Gesture,  color: "#3dd52e",   plugin: [
+            "tap-to-step",
             "handedness_recognition_one_shot",
-            "handedness_recognition_down_scrolling",
+            "handedness_recognition_scrolling",
             "touch_heat_map",
             "phone_tilt_to_ground",
             "phone_tilt_to_start",
@@ -164,6 +166,7 @@ export const cache = [
 /////////DESKTOP/////////
     {device: "desktop", interactions: [
         {type: "cursor",   icon: Cursor,  color: "#37a4fa",   plugin: [
+            "tap-to-step",
             "cursor_heat_map",
             "element_hover_count",
             "click_heat_map",
@@ -210,21 +213,94 @@ export const cache = [
 ]
 
 export const pluginList = [
+    {name: "tap-to-step",
+        device: {phone: true, tablet: true, desktop: true},
+        download:  [{name: "Swift", version: "5.4", icon: Swift},
+                    {name: "Kotlin", version: "1.4.30", icon: Kotlin},
+                    {name: "React Native", icon: React},
+                    {name: "React", icon: React},
+                    {name: "JavaScript", icon: JS}
+            ],
+        text: "Textbox and other components may be annoying to trigger, with this plugin you can trigger a list of action, one by one ,just by clicking anywhere.",
+        code: <code>
+                <span style={{color: colors[2]}}>let</span> tapToNext = <span style={{color: colors[3]}}>TapToNext</span>(steps: [<span style={{color: colors[3]}}>step1</span>, <span style={{color: colors[3]}}>step2</span>, <span style={{color: colors[3]}}>step3</span>], loop: <span style={{color: colors[5]}}>false</span>)<br/><br/>
+                <span style={{color: colors[2]}}>@IBAction func</span> <span style={{color: colors[4]}}>tap</span>(_ sender:  <span style={{color: colors[5]}}>UITapGestureRecognizer</span> ) &#123;<br/>
+                <br/>
+                <span className="tab"/><span style={{color: colors[3]}}>tapToNext</span>.<span style={{color: colors[5]}}>next</span>()<br/>
+                    &#125;<br/>
+            </code>
+    },
+
     {name: "handedness_recognition_one_shot",
         device: {phone: true, tablet: true, desktop: false},
         download:  [{name: "Swift", version: "5.4", icon: Swift},
                     {name: "Kotlin", version: "1.4.30", icon: Kotlin},
                     {name: "React Navive", icon: React}
                 ],
-        text: "In a world where smartphones are getting bigger and bigger. This code allow you to know which hand his used. You can allow a button to be touched easily after one swipe. Powered by an IA and the gyroscope."},
+        text: "In a world where smartphones are getting bigger and bigger. This code allow you to know which hand his used. You can allow a button to be touched easily after one swipe. Powered by an IA and the gyroscope.",
+        code: <code>
+                <span style={{color: colors[2]}}>class</span> <span style={{color: colors[4]}}>ViewController</span>: <span style={{color: colors[5]}}>UIViewController</span>, <span style={{color: colors[3]}}>HandednessDelegate</span><br/>
+                &#123;<br/>
+                <br/>
+                <span className="tab"/><span style={{color: colors[2]}}>func</span> <span style={{color: colors[4]}}>onAction</span>(hand: <span style={{color: colors[3]}}>Handedness</span>) &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>if</span> (hand == <span style={{color: colors[3]}}>Handedness</span>.<span style={{color: colors[3]}}>left</span>) &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"👈"</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>else if</span> (hand == <span style={{color: colors[3]}}>Handedness</span>.<span style={{color: colors[3]}}>right</span>) &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"👉"</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>else</span> &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"🤔"</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
+                <span className="tab"/><span className="tab"/>&#125;<br/>
+                <br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>@IBOutlet weak var</span> <span style={{color: colors[4]}}>label</span>: <span style={{color: colors[5]}}>UILabel!</span><br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>@IBOutlet var</span> <span style={{color: colors[4]}}>handednessDetectionView</span>: <span style={{color: colors[3]}}>SimpleHandednessDetectionView!</span><br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>var</span> <span style={{color: colors[4]}}>learning</span>: <span style={{color: colors[3]}}>HandednessLearning</span> = <span style={{color: colors[3]}}>HandednessLearning</span>()<br/>
+                <br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>override func</span> <span style={{color: colors[4]}}>viewDidLoad</span>() &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>super</span>.<span style={{color: colors[5]}}>viewDidLoad</span>()<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>handednessDetectionView</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[3]}}>learning</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>learning</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[2]}}>self</span><br/>
+                <span className="tab"/><span className="tab"/>&#125;<br/>
+                    &#125;<br/>
+            </code>
+    },
 
-    {name: "handedness_recognition_down_scrolling",
+    {name: "handedness_recognition_scrolling",
         device: {phone: true, tablet: true, desktop: false},
         download:  [{name: "Swift", version: "5.4", icon: Swift},
                     {name: "Kotlin", version: "1.4.30", icon: Kotlin},
                     {name: "React Navive", icon: React}
                 ],
-        text: "In a world where smartphones are getting bigger and bigger. This code allow you to know which hand his used. You can allow a button to be touched easily after some scrolls. Powered by an modulable AI."
+        text: "In a world where smartphones are getting bigger and bigger. This code allow you to know which hand his used. You can allow a button to be touched easily after some scrolls. Powered by an modulable AI.",
+        code: <code>
+                <span style={{color: colors[2]}}>class</span> <span style={{color: colors[4]}}>ViewController</span>: <span style={{color: colors[5]}}>UIViewController</span>, <span style={{color: colors[3]}}>HandednessDelegate</span><br/>
+                &#123;<br/>
+                <br/>
+                <span className="tab"/><span style={{color: colors[2]}}>func</span> <span style={{color: colors[4]}}>onAction</span>(hand: <span style={{color: colors[3]}}>Handedness</span>) &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>if</span> (hand == <span style={{color: colors[3]}}>Handedness</span>.<span style={{color: colors[3]}}>left</span>) &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"👈"</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>else if</span> (hand == <span style={{color: colors[3]}}>Handedness</span>.<span style={{color: colors[3]}}>right</span>) &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"👉"</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>else</span> &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>label</span>.<span style={{color: colors[5]}}>text</span> = <span style={{color: colors[0]}}>"🤔"</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/>&#125;<br/>
+                <span className="tab"/><span className="tab"/>&#125;<br/>
+                <br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>@IBO weak var</span> <span style={{color: colors[4]}}>label</span>: <span style={{color: colors[5]}}>UILabel!</span><br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>@IBOutlet var</span> <span style={{color: colors[4]}}>handednessDetectionView</span>: <span style={{color: colors[3]}}>SimpleHandednessDetectionView!</span><br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>var</span> <span style={{color: colors[4]}}>learning</span>: <span style={{color: colors[3]}}>HandednessLearning</span> = <span style={{color: colors[3]}}>HandednessLearning</span>(size: <span style={{color: colors[0]}}>5</span>)<br/>
+                <br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>override func</span> <span style={{color: colors[4]}}>viewDidLoad</span>() &#123;<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>super</span>.<span style={{color: colors[5]}}>viewDidLoad</span>()<br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>handednessDetectionView</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[3]}}>learning</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>learning</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[2]}}>self</span><br/>
+                <span className="tab"/><span className="tab"/>&#125;<br/>
+                    &#125;<br/>
+            </code>
     },
 
     {name: "touch_heat_map",
