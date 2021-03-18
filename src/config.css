@@ -5,6 +5,16 @@
     padding: 0px;
 }
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: transparent #F3F3F3;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+
 input, button, submit
 {
     border:none;
@@ -42,4 +52,20 @@ input, button, submit
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+}
+
+.page
+{
+    min-height: 100vh;
+}
+
+.info-button
+{
+    position: absolute;
+    right: 9vw;
+    width: 4vh;
+    bottom: 8vh;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    z-index: 999;
 }

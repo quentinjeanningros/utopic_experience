@@ -32,9 +32,9 @@
 .toggle-button
 {
     position: absolute;
-    right: 5vw;
-    width: 5vh;
-    top: 6vh;
+    right: 7vw;
+    width: 4vh;
+    top: 7vh;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
     z-index: 999;

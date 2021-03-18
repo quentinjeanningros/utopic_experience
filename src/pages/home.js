@@ -139,7 +139,6 @@ function PluginButton(props)
             onBlur={toggleHoverLeave}
             onMouseEnter={toggleHoverEnter}
             onMouseLeave={toggleHoverLeave}
-            onClick={props.action}
             style={{color: color}}
             onClick={()=>{window.location.href = "/plugin:" + props.text}}>
         {snakeToText(props.text)}

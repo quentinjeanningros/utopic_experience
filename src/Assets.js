@@ -256,12 +256,12 @@ export const pluginList = [
                 <br/>
                 <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>@IBOutlet weak var</span> <span style={{color: colors[4]}}>label</span>: <span style={{color: colors[5]}}>UILabel!</span><br/>
                 <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>@IBOutlet var</span> <span style={{color: colors[4]}}>handednessDetectionView</span>: <span style={{color: colors[3]}}>SimpleHandednessDetectionView!</span><br/>
-                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>var</span> <span style={{color: colors[4]}}>learning</span>: <span style={{color: colors[3]}}>HandednessLearning</span> = <span style={{color: colors[3]}}>HandednessLearning</span>()<br/>
+                <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>var</span> <span style={{color: colors[4]}}>oneShot</span>: <span style={{color: colors[3]}}>HandednessOneShot</span> = <span style={{color: colors[3]}}>HandednessOneShot</span>()<br/>
                 <br/>
                 <span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>override func</span> <span style={{color: colors[4]}}>viewDidLoad</span>() &#123;<br/>
                 <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[2]}}>super</span>.<span style={{color: colors[5]}}>viewDidLoad</span>()<br/>
-                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>handednessDetectionView</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[3]}}>learning</span><br/>
-                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>learning</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[2]}}>self</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>handednessDetectionView</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[3]}}>oneShot</span><br/>
+                <span className="tab"/><span className="tab"/><span className="tab"/><span style={{color: colors[3]}}>oneShot</span>.<span style={{color: colors[3]}}>delegate</span> = <span style={{color: colors[2]}}>self</span><br/>
                 <span className="tab"/><span className="tab"/>&#125;<br/>
                     &#125;<br/>
             </code>
@@ -304,157 +304,157 @@ export const pluginList = [
     },
 
     {name: "touch_heat_map",
-        device: {phone: true, tablet: true, desktop: false},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "phone_tilt_to_ground",
-        device: {phone: true, tablet: true, desktop: false},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "zoom_in_out",
-        device: {phone: true, tablet: true, desktop: false},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "spam-zone",
-        device: {phone: true, tablet: true, desktop: false},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "down_scrolling",
-        device: {phone: true, tablet: true, desktop: false},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "side_scrolling",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "element_hanging",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "touch_and_movements",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "face_detection",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "interface_grid",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "object_size",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "eye_tracking_heat_map",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "face_count",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "item_count",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "animation_triggers",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "ux_easing",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "in_out_animation",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "scene_transition",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "content_transition",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "sort_by_affinity",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "sort_by_color",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "sort_by_similarity",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "sort_by_ascii",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "sort_by_alphabet",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "sort_by_count",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
 
     {name: "3D_position_compare_to_ground",
-        device: {phone: true, tablet: true, desktop: true},
+        device: {phone: false, tablet: false, desktop: false},
         download: [],
         text: ""
     },
