@@ -23,9 +23,9 @@ function Home(props)
             <ToggleButton trueIcon={Tab} falseIcon={List} state={fastAcces} action={()=>setAcces(!fastAcces)}/>
             {!fastAcces ?
              <div className="home-list-container">
-                <HomeButton icon={Phone} iconWhite={PhoneWhite} text="Phone"     color={colors[1]} action={() => {redirect("phone")}}/>
-                <HomeButton icon={Tablet} iconWhite={TabletWhite} text="Tablet"    color={colors[3]} action={() => {redirect("tablet")}}/>
-                <HomeButton icon={PC} iconWhite={PCWhite} text="Desktop"   color={colors[5]} action={() => {redirect("desktop")}}/>
+                <HomeButton icon={Phone} iconWhite={PhoneWhite} text="Phone" color={colors[2]} index={3} action={() => {redirect("phone")}}/>
+                <HomeButton icon={Tablet} iconWhite={TabletWhite} text="Tablet" color={colors[3]} index={1} action={() => {redirect("tablet")}}/>
+                <HomeButton icon={PC} iconWhite={PCWhite} text="Desktop" color={colors[5]} index={2} action={() => {redirect("desktop")}}/>
             </div>
             :
             <div>
@@ -50,25 +50,24 @@ function HomeButton(props)
 
     let color = hover ? props.color : "#000000"
 
-    let style={
-        height: props.height,
-        width: props.width,
-        backgroundColor: color,
-        borderBottomLeftRadius: hover ? "0vh" : "12.5vh"
-    }
+
     return (
-        <button className="home-button"
+        <div className="home-button"
+            style={{zIndex: props.index}}>
+            <div className="home-image-container">
+                <img className={"home-image" + (hover ? "__hover" : "")} style={{opacity: hover ? 1 : 0}} src={props.icon} alt="home-icon" />
+                <img className={"home-image" + (hover ? "__hover" : "")} style={{opacity: hover ? 0 : 1}} src={props.iconWhite} alt="home-icon-white" />
+            </div>
+            <button
+            style={{zIndex: 10, height: "100%", width: "100%"}}
             onFocus={toggleHoverEnter}
             onBlur={toggleHoverLeave}
             onMouseEnter={toggleHoverEnter}
             onMouseLeave={toggleHoverLeave}
             onClick={props.action}>
-            <div className="home-image-container">
-                <img className={"home-image-color" + (hover ? "__hover" : "")} src={props.icon} alt="Logo" />
-                <img className={"home-image" + (hover ? "__hover" : "")} src={props.iconWhite} alt="Logo" />
-            </div>
             <h2 className="font-main home-button-text" style={{color: color}}>{props.text}</h2>
-        </button>
+            </button>
+        </div>
     );
 }
 

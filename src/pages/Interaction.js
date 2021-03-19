@@ -23,8 +23,8 @@ class Interaction extends React.Component
     render() {
         return (
             <div className="interaction-container">
-                <div className="interaction-icon">
-                    {this.interaction.icon}
+                <div className="interaction-icon-container">
+                    <img className="interaction-icon" src={this.interaction.white} alt={this.interaction.type}/>
                 </div>
                 <div className="interaction-list">
                     {this.interaction.plugin.map((item, index) =>

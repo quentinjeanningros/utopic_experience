@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 97vh;
+    height: 87vh;
     padding-right: 8vw;
     padding-left: 8vw;
 }
@@ -22,7 +22,7 @@
 {
     margin-left: 9vw;
     margin-right: 9vw;
-    margin-top: 2vh;
+    margin-top: 7vh;
     width: 7vw;
     font-size: 2vw;
     display: flex;
@@ -31,18 +31,29 @@
     justify-content: center;
 }
 
+.device-interaction-icon-container
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 17vw;
+    z-index: 2;
+}
+
 .device-interaction-icon
 {
     position: absolute;
-    width: 11vh;
-    transition-duration: 0.2s;
+    height: 15vw;
+    transition-duration: 0.10s;
     transition-timing-function: ease-in;
 }
 
 .device-interaction-icon__hover
 {
     position: absolute;
-    width: 12vh;
+    height: 17vw;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
     animation: small-float 6s ease-in-out infinite;
@@ -50,17 +61,17 @@
 
 .device-interaction-text
 {
-    margin-top: 22.5vh;
+    margin-top: -3vw;
     font-size: 3vh;
     text-align: center;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
+    z-index: 1;
 }
 
 
 @keyframes small-float {
     0%   { transform: translatey(0px); }
-    33%  { transform: translatey(-20px);}
-    66% { transform: translatey(20px);}
+    50% { transform: translatey(-20px);}
     100% { transform: translatey(0px); }
 }

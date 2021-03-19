@@ -32,14 +32,23 @@
     transition-timing-function: ease-in;
 }
 
+.interaction-icon-container
+{
+    overflow: hidden;
+    position:absolute;
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+}
+
 .interaction-icon
 {
     position: absolute;
     z-index: 0;
     fill: #e6e6e6e6;
-    width: 30vw;
-    top: 27vh;
-    left: 55vw;
+    height: 50vw;
+    top: 15vh;
+    left: 37vw;
     animation: float 6s ease-in-out infinite;
 }
 

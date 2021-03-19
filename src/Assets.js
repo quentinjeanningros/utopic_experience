@@ -1,4 +1,38 @@
-import {Animation, AR, Camera, Gesture, Sort, Special, Cursor, VR, Webcam, Swift, Kotlin, React, JS} from "./icons/InterractionIcons.js"
+import {Swift, Kotlin, React, JS} from "./icons/InterractionIcons.js"
+
+import animBlue from './icons/animation/blue.png'
+import animRed from './icons/animation/red.png'
+import animGreen from './icons/animation/green.png'
+import animWhite from './icons/animation/white.png'
+
+import arRed from './icons/ar/red.png'
+import arGreen from './icons/ar/green.png'
+import arWhite from './icons/ar/white.png'
+
+import cursorBlue from './icons/cursor/blue.png'
+import cursorWhite from './icons/cursor/white.png'
+
+import photoBlue from './icons/photo/blue.png'
+import photoRed from './icons/photo/red.png'
+import photoGreen from './icons/photo/green.png'
+import photoWhite from './icons/photo/white.png'
+
+import sortingBlue from './icons/sorting/blue.png'
+import sortingRed from './icons/sorting/red.png'
+import sortingGreen from './icons/sorting/green.png'
+import sortingWhite from './icons/sorting/white.png'
+
+import specialBlue from './icons/special/blue.png'
+import specialRed from './icons/special/red.png'
+import specialGreen from './icons/special/green.png'
+import specialWhite from './icons/special/white.png'
+
+import touchRed from './icons/touch/red.png'
+import touchGreen from './icons/touch/green.png'
+import touchWhite from './icons/touch/white.png'
+
+import vrBlue from './icons/vr/blue.png'
+import vrWhite from './icons/vr/white.png'
 
 export const colors = ["#ffa502", "#ff6348", "#ff4757", "#2ed573", "#1e90ff", "#3742fa"]
 
@@ -60,7 +94,7 @@ export const cache = [
 
 /////////PHONE/////////
     {device: "phone",   interactions: [
-        {type: "gesture_recognition",   icon: Gesture,  color: "#ff47b3",   plugin: [
+        {type: "gesture_recognition", icon: touchRed, white: touchWhite, color: colors[2], plugin: [
             "tap-to-step",
             "handedness_recognition_one_shot",
             "handedness_recognition_scrolling",
@@ -72,26 +106,26 @@ export const cache = [
             "down_scrolling",
             "side_scrolling",
         ]},
-        {type: "augmented_reality",                  icon: AR,     color: "#ff4785",     plugin: [
+        {type: "augmented_reality", icon: arRed, white: arWhite, color: colors[2], plugin: [
             "element_hanging",
             "touch_and_movements",
             "face_detection",
             "interface_grid",
             "object_size"
         ]},
-        {type: "camera",                icon: Camera,   color: "#ff4766",   plugin: [
+        {type: "camera", icon: photoRed, white: photoWhite, color: colors[2], plugin: [
             "eye_tracking_heat_map",
             "face_count",
             "item_count"
         ]},
-        {type: "animation",             icon: Animation,color: "#ff4748",   plugin: [
+        {type: "animation", icon: animRed, white: animWhite, color: colors[2], plugin: [
             "animation_triggers",
             "ux_easing",
             "in_out_animation",
             "scene_transition",
             "content_transition"
         ]},
-        {type: "data_sorting",          icon: Sort,     color: "#ff6547",   plugin: [
+        {type: "data_sorting", icon: sortingRed, white: sortingWhite, color: colors[2], plugin: [
             "sort_by_affinity",
             "sort_by_color",
             "sort_by_similarity",
@@ -99,7 +133,7 @@ export const cache = [
             "sort_by_alphabet",
             "sort_by_count"
         ]},
-        {type: "special_tools",         icon: Special,  color: "#ff9347",   plugin: [
+        {type: "special_tools", icon: specialRed, white: specialWhite, color: colors[2], plugin: [
             "3D_position_compare_to_ground",
             "gyroscope_data_analyse",
             "subroutine_bypass",
@@ -113,7 +147,7 @@ export const cache = [
 
 /////////TABLET/////////
     {device: "tablet",  interactions: [
-        {type: "gesture_recognition",   icon: Gesture,  color: "#3dd52e",   plugin: [
+        {type: "gesture_recognition", icon: touchGreen, white: touchWhite, color: colors[3], plugin: [
             "tap-to-step",
             "handedness_recognition_one_shot",
             "handedness_recognition_scrolling",
@@ -125,26 +159,26 @@ export const cache = [
             "down_scrolling",
             "side_scrolling",
         ]},
-        {type: "augmented_reality",                  icon: AR,     color: "#2ed549",     plugin: [
+        {type: "augmented_reality", icon: arGreen, white: arWhite, color: colors[3], plugin: [
             "element_hanging",
             "touch_and_movements",
             "face_detection",
             "interface_grid",
             "object_size"
         ]},
-        {type: "camera",                icon: Camera,   color: "#2ed565",   plugin: [
+        {type: "camera", icon: photoGreen, white: photoWhite, color: colors[3], plugin: [
             "eye_tracking_heat_map",
             "face_count",
             "item_count"
         ]},
-        {type: "animation",             icon: Animation,color: "#2ed581",   plugin: [
+        {type: "animation", icon: animGreen, white: animWhite, color: colors[3], plugin: [
             "animation_triggers",
             "ux_easing",
             "in_out_animation",
             "scene_transition",
             "content_transition"
         ]},
-        {type: "data_sorting",          icon: Sort,     color: "#2ed59d",   plugin: [
+        {type: "data_sorting", icon: sortingGreen, white: sortingWhite, color: colors[3], plugin: [
             "sort_by_affinity",
             "sort_by_color",
             "sort_by_similarity",
@@ -152,7 +186,7 @@ export const cache = [
             "sort_by_alphabet",
             "sort_by_count"
         ]},
-        {type: "special_tools",         icon: Special,  color: "#2ed5c7",   plugin: [
+        {type: "special_tools", icon: specialGreen, white: specialWhite, color: colors[3], plugin: [
             "3D_position_compare_to_ground",
             "gyroscope_data_analyse",
             "subroutine_bypass",
@@ -165,7 +199,7 @@ export const cache = [
 
 /////////DESKTOP/////////
     {device: "desktop", interactions: [
-        {type: "cursor",   icon: Cursor,  color: "#37a4fa",   plugin: [
+        {type: "cursor", icon: cursorBlue, white: cursorWhite, color: colors[5], plugin: [
             "tap-to-step",
             "cursor_heat_map",
             "element_hover_count",
@@ -174,27 +208,27 @@ export const cache = [
             "side_scrolling",
             "spam_heat_map"
         ]},
-        {type: "virtual_reality",                   icon: VR,     color: "#3773fa",   plugin: [
+        {type: "virtual_reality", icon: vrBlue, white: vrWhite, color: colors[5], plugin: [
             "object_tracking",
             "ergonomic_interface_for_iot",
             "viewing_angle_heat_map",
             "interface_grid"
         ]},
-        {type: "camera",                icon: Webcam,   color: "#3752fa",   plugin: [
+        {type: "camera", icon: photoBlue, white: photoWhite, color: colors[5], plugin: [
             "eye_tracking_heat_map",
             "hand_recognition",
             "item_count",
             "face_tracking",
             "3D_camera_simulation"
         ]},
-        {type: "animation",             icon: Animation,color: "#3c37fa",   plugin: [
+        {type: "animation", icon: animBlue, white: animWhite, color: colors[5], plugin: [
             "animation_triggers",
             "ux_easing",
             "in_out_animation",
             "scene_transition",
             "content_transition",
         ]},
-        {type: "data_sorting",          icon: Sort,     color: "#5d37fa",   plugin: [
+        {type: "data_sorting", icon: sortingBlue, white: sortingWhite, color: colors[5], plugin: [
             "sort_by_affinity",
             "sort_by_color",
             "sort_by_similarity",
@@ -202,7 +236,7 @@ export const cache = [
             "sort_by_alphabet",
             "sort_by_count"
         ]},
-        {type: "special_tools",         icon: Special,  color: "#8e37fa",   plugin: [
+        {type: "special_tools", icon: specialBlue, white: specialWhite, color: colors[5], plugin: [
             "subroutine_bypass",
             "crypt_wallet_implementation",
             "fast_authentification_with_phone",
