@@ -41,7 +41,7 @@
 {
     position: absolute;
     height: 20vw;
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
     transition-timing-function: ease-in;
 }
 
@@ -50,7 +50,7 @@
     position: absolute;
     height: 60vw;
     animation: float 6s ease-in-out infinite;
-    transition-duration: 0.2s;
+    transition-duration: 0.1s;
     transition-timing-function: ease-in;
 }
 
