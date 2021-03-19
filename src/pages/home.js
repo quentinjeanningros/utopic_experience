@@ -1,4 +1,4 @@
-import { colors, getRandomColor, cache, snakeToText} from '../Assets';
+import { getRandomColor, cache, snakeToText} from '../Assets';
 import './Home.css';
 import React, {useState} from 'react';
 import {List, Tab} from '../icons/InterractionIcons.js'
