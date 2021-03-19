@@ -23,9 +23,9 @@ function Home(props)
             <ToggleButton trueIcon={Tab} falseIcon={List} state={fastAcces} action={()=>setAcces(!fastAcces)}/>
             {!fastAcces ?
              <div className="home-list-container">
-                <HomeButton icon={Phone} iconWhite={PhoneWhite} text="Phone" color={colors[2]} index={3} action={() => {redirect("phone")}}/>
-                <HomeButton icon={Tablet} iconWhite={TabletWhite} text="Tablet" color={colors[3]} index={1} action={() => {redirect("tablet")}}/>
-                <HomeButton icon={PC} iconWhite={PCWhite} text="Desktop" color={colors[5]} index={2} action={() => {redirect("desktop")}}/>
+                <HomeButton icon={Phone} iconWhite={PhoneWhite} text="Phone" index={3} action={() => {redirect("phone")}}/>
+                <HomeButton icon={Tablet} iconWhite={TabletWhite} text="Tablet" index={1} action={() => {redirect("tablet")}}/>
+                <HomeButton icon={PC} iconWhite={PCWhite} text="Desktop" index={2} action={() => {redirect("desktop")}}/>
             </div>
             :
             <div>
