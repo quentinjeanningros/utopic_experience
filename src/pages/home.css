@@ -13,7 +13,7 @@
 .home-button
 {
     flex: 1;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,7 +40,7 @@
 .home-image
 {
     position: absolute;
-    height: 70vw;
+    height: 20vw;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
 }
@@ -48,7 +48,7 @@
 .home-image__hover
 {
     position: absolute;
-    height: 75vw;
+    height: 60vw;
     animation: float 6s ease-in-out infinite;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
@@ -57,11 +57,11 @@
 .home-button-text
 {
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
     letter-spacing: 0.01em;
     transition-duration: 0.2s;
     transition-timing-function: ease-in;
-    z-index: 2;
+    z-index: 10;
 }
 
 .toggle-button

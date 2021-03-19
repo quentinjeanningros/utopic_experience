@@ -48,13 +48,12 @@ function HomeButton(props)
         setHover(false)
     }
 
-    let color = hover ? props.color : "#000000"
+    let color = hover ? "#ffffff" : "#000000"
 
 
     return (
-        <div className="home-button"
-            style={{zIndex: props.index}}>
-            <div className="home-image-container">
+        <div className="home-button">
+            <div className="home-image-container"  style={{zIndex: props.index}}>
                 <img className={"home-image" + (hover ? "__hover" : "")} style={{opacity: hover ? 1 : 0}} src={props.icon} alt="home-icon" />
                 <img className={"home-image" + (hover ? "__hover" : "")} style={{opacity: hover ? 0 : 1}} src={props.iconWhite} alt="home-icon-white" />
             </div>
