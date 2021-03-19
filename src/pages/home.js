@@ -2,6 +2,14 @@ import { colors, getRandomColor, cache, snakeToText} from '../Assets';
 import './Home.css';
 import React, {useState} from 'react';
 import {List, Tab} from '../icons/InterractionIcons.js'
+import PC from '../icons/device/color/pc.png'
+import Tablet from '../icons/device/color/tablet.png'
+import Phone from '../icons/device/color/phone.png'
+import PCWhite from '../icons/device/white/pc.png'
+import TabletWhite from '../icons/device/white/tablet.png'
+import PhoneWhite from '../icons/device/white/phone.png'
+
+
 
 function Home(props)
 {
@@ -15,9 +23,9 @@ function Home(props)
             <ToggleButton trueIcon={Tab} falseIcon={List} state={fastAcces} action={()=>setAcces(!fastAcces)}/>
             {!fastAcces ?
              <div className="home-list-container">
-                <HomeButton height="30vh" width="17vh" text="Phone"     color={colors[1]} action={() => {redirect("phone")}}/>
-                <HomeButton height="30vh" width="37vh" text="Tablet"    color={colors[3]} action={() => {redirect("tablet")}}/>
-                <HomeButton height="30vh" width="45vh" text="Desktop"   color={colors[5]} action={() => {redirect("desktop")}}/>
+                <HomeButton icon={Phone} iconWhite={PhoneWhite} text="Phone"     color={colors[1]} action={() => {redirect("phone")}}/>
+                <HomeButton icon={Tablet} iconWhite={TabletWhite} text="Tablet"    color={colors[3]} action={() => {redirect("tablet")}}/>
+                <HomeButton icon={PC} iconWhite={PCWhite} text="Desktop"   color={colors[5]} action={() => {redirect("desktop")}}/>
             </div>
             :
             <div>
@@ -55,7 +63,10 @@ function HomeButton(props)
             onMouseEnter={toggleHoverEnter}
             onMouseLeave={toggleHoverLeave}
             onClick={props.action}>
-            <div className="home-button-box" style={style}/>
+            <div className="home-image-container">
+                <img className={"home-image-color" + (hover ? "__hover" : "")} src={props.icon} alt="Logo" />
+                <img className={"home-image" + (hover ? "__hover" : "")} src={props.iconWhite} alt="Logo" />
+            </div>
             <h2 className="font-main home-button-text" style={{color: color}}>{props.text}</h2>
         </button>
     );
